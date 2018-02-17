@@ -1,0 +1,23 @@
+{
+  "name": "allergen-warning-service",
+  "version": "0.0.0",
+  "description": "",
+  "author": "jigarkb <jigarbhatt93@gmail.com>",
+  "main": "functions/__main__.js",
+  "dependencies": {
+    "@google-cloud/vision": "^0.15.2",
+    "async": "^2.6.0",
+    "lib": "^3.0.1"
+  },
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "jigarkb/allergen-warning-service",
+    "timeout": 10000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}
