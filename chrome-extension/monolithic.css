@@ -25,9 +25,9 @@
 .popup .popuptext::after {
     content: "";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
+    bottom: 100%;
+    left: 100%;
+    /*margin-left: -5px;*/
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
