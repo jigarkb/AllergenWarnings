@@ -1,6 +1,6 @@
 {
   "name": "allergen-warning-service",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "jigarkb <jigarbhatt93@gmail.com>",
   "main": "functions/__main__.js",
