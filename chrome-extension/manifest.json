@@ -24,5 +24,8 @@
   "web_accessible_resources": [
     "exclamation-mark.png",
     "checked-mark.png"
-  ]
+  ],
+  "icons": {
+    "512": "icon/icon512.png"
+  }
 }

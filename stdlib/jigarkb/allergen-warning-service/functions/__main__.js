@@ -17,8 +17,7 @@ var visionClient = new vision.ImageAnnotatorClient({
 * @returns {any}
 */
 module.exports = (image_urls = [], context, callback) => {
-    var allergens = ['milk', 'eggs', 'fish', 'crustacean shellfish', 'tree nuts', 'peanuts', 'wheat', 'soybeans', 'soy', 'shell'];
-    var i = 0, j = 0;
+    var allergens = ['milk', 'eggs', 'fish', 'crustacean shellfish', 'tree nuts', 'peanuts', 'wheat', 'soybeans', 'soy', 'shell', 'cashew'];
 
     let fns = image_urls.map((image_url) => {
         return (cb) => {
@@ -48,7 +47,8 @@ module.exports = (image_urls = [], context, callback) => {
         var containing_allergens = {};
         for (var i=0; i < results.length; i++){
             for(var j=0; j < allergens.length; j++){
-                if(results[i].indexOf(allergens[j]) > -1){
+                console.log(results[i]);
+                if(results[i].indexOf(allergens[j]) > -1 && (results[i].indexOf(allergens[j] + " free") < 0 || results[i].indexOf("no "+allergens[j] < 0 ))){
                     containing_allergens[allergens[j]] = true;
                 }
             }

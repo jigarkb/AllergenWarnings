@@ -4,7 +4,7 @@ var checked_mark_png = chrome.extension.getURL('checked-mark.png');
 var price_feature_div = $('#price_feature_div');
 
 var inject_html = '<a id="my_popup" href="#" data-toggle="popover" data-trigger="hover"  title="Allergens Warning" data-html="true" ' +
-    'data-content="<p style=\'color: green\'>This product is probably safe from allergens. Buy with caution!</p>">' +
+    'data-content="<p style=\'color: green\'>This product is probably safe from allergens. See label!</p>">' +
     '<img id="warning_img" width="7%" src="'+ checked_mark_png +'">' +
     '</a>';
 
@@ -26,7 +26,7 @@ if(image_urls.length > 0){
         data: {"image_urls": JSON.stringify(image_urls)},
         success: function(result){
             var some_key = false;
-            var popup_html = "It's highly likely that this product contains these allergens: ";
+            var popup_html = "It's likely that this product contains these allergens: ";
             for (var key in result) {
                 some_key = true;
                 popup_html += key + ", ";
