@@ -26,7 +26,11 @@ module.exports = (image_urls = [], context, callback) => {
                 if (err) {
                     return cb(err);
                 }
-                var found_text = text["fullTextAnnotation"]["text"].toLowerCase();
+                var found_text = "";
+                if(text["fullTextAnnotation"] && text["fullTextAnnotation"].hasOwnProperty("text")){
+                    found_text = text["fullTextAnnotation"]["text"].toLowerCase();
+                }
+
                 cb(null, found_text);
 
             });
