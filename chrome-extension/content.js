@@ -22,7 +22,7 @@ thumbnail_images.each(function(i, obj) {
 
 if(image_urls.length > 0){
     $.ajax({
-        url: "http://jigarkb.lib.id/allergen-warning-service/api",
+        url: "https://jigarkb.lib.id/allergen-warning-service/api",
         data: {"image_urls": JSON.stringify(image_urls)},
         success: function(result){
             var some_key = false;
