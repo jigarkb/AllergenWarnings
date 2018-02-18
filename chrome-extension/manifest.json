@@ -26,6 +26,7 @@
     "checked-mark.png"
   ],
   "icons": {
-    "512": "icon/icon512.png"
+    "512": "icon/icon512.png",
+    "128": "icon/icon128.png"
   }
 }
