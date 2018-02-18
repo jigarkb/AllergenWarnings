@@ -31,6 +31,7 @@ if(image_urls.length > 0){
                 some_key = true;
                 popup_html += key + ", ";
             }
+            popup_html = popup_html.replace(/,\s*$/, "");
             price_feature_div.append(inject_html);
             if(some_key){
                 $("#my_popup").attr('data-content', "<p style='color: red'>"+popup_html+"</p>").html(
@@ -38,6 +39,5 @@ if(image_urls.length > 0){
                 );
             }
             $('[data-toggle="popover"]').popover();
-
         }});
 }
